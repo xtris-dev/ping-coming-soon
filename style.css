@@ -1,0 +1,157 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/* VARIABLES CSS */
+:root {
+    /* Primary colors */
+    --blue: hsl(223, 87%, 63%);
+    /* Secondary colors */
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    /* Neutral colors */
+    --gray: hsl(0, 0%, 59%);
+    --dark-blue: hsl(209, 33%, 12%);
+}
+
+/* BASIC SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 2rem;
+    font-family: 'Libre Franklin', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+/* ======= MAIN CSS - Desktop first ======= */
+#ping-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 620px;
+}
+#ping-container #logo {
+    margin-bottom: 50px;
+}
+#ping-container h1 {
+    color: var(--gray);
+    font-weight: 300;
+    font-size: 5rem;
+    margin-bottom: 15px;
+}
+#ping-container h1 #title-bold {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+#ping-container .subscribe {
+    color: var(--dark-blue);
+    margin-bottom: 40px;
+}
+
+.mail-container {
+    width: 100%;
+    margin-bottom: 80px;
+}
+.mail-container form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mail-container form #email {
+    width: 67%;
+    padding: 18px 25px;
+    outline: none;
+    border: 1px solid hsla(0, 0%, 59%, 0.274);
+    border-radius: 25px;
+}
+.mail-container form #email::placeholder {
+    opacity: .5;
+    font-size: 1.6rem;
+    color: hsla(0, 0%, 59%, 0.719);
+}
+.mail-container form button {
+    width: 30%;
+    padding: 16px 18px;
+    border-radius: 25px;
+    color: white;
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0px 0px 7px -1px var(--blue);
+}
+
+#ping-container #dashboard {
+    width: 100%;
+}
+
+.social-icon {
+    margin-top: 60px;
+}
+.social-icon i {
+    color: var(--blue);
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid hsla(0, 0%, 59%, 0.295);
+    border-radius: 50%;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+.social-icon i:hover {
+    background: var(--blue);
+    color: white;
+}
+#ping-container .copyright {
+    font-size: 1.3rem;
+    color: var(--gray);
+}
+
+/* Javascript class */
+.mail-error {
+    border: 1px solid var(--light-red)!important;
+    outline: none;
+}
+.error-text {
+    color: red; 
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.3rem;
+    display: none;
+}
+
+/* =========== MEDIA QUERIES ======= */
+@media screen and (max-width: 630px) {
+    #ping-container {
+        max-width: 85%;
+        padding: 30px 0;
+    }
+    #ping-container h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #ping-container .subscribe {
+        margin-bottom: 35px;
+        font-size: 1.6rem;
+    }
+
+    .mail-container form {
+        flex-direction: column;
+    }
+    .mail-container form #email {
+        width: 100%;
+    }
+    .mail-container form button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
